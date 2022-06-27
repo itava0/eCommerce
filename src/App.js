@@ -1,3 +1,5 @@
+import Categories from "./components/Categories/Categories";
+
 const App = () => {
   const categories = [
     {
@@ -22,18 +24,7 @@ const App = () => {
     },
   ];
   return (
-    <div className="catergories-container">
-      {categories.map(({ title }) => (
-        <div className="catergory-container">
-          <div className="background-image">
-            <div className="catergory-body-container">
-              <h2>{title}</h2>
-              <p>Shop Now</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
+    <Categories categories={categories}/>
   );
 };
 
