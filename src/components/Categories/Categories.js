@@ -1,11 +1,14 @@
-import './categories.scss'
+import "./categories.scss";
 
-const Categories = ({categories}) => {
+const Categories = ({ categories }) => {
   return (
     <div className="categories-container">
-      {categories.map(({ title, id }) => (
+      {categories.map(({ title, id, imageUrl }) => (
         <div key={id} className="category-container">
-          <div className="background-image">
+          <div
+            className="background-image"
+            style={{ backgroundImage: `url(${imageUrl})` }}
+          >
             <div className="category-body-container">
               <h2>{title}</h2>
               <p>Shop Now</p>
@@ -15,6 +18,6 @@ const Categories = ({categories}) => {
       ))}
     </div>
   );
-}
+};
 
-export default Categories
+export default Categories;
