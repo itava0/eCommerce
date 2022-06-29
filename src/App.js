@@ -1,12 +1,12 @@
-import { useState } from "react";
-import Categories from "./components/Categories/Categories";
-import data from './data'
+import { Routes, Route } from "react-router-dom";
+import Home from "./routes/home/Home";
 
 const App = () => {
-  const [categories] = useState(data)
-  
-
-  return <Categories categories={categories} />;
+  return (
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+    </Routes>
+  );
 };
 
 export default App;
