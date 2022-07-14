@@ -1,4 +1,4 @@
-import Button from '../button/button.component';
+import Button from '../button/button';
 
 import './cart-dropdown.scss';
 
